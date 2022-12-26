@@ -7,5 +7,5 @@ import com.premraj.registerservice.model.UserDetails;
 
 @Repository
 public interface RegisterServiceRepo extends JpaRepository<UserDetails, Integer> {
-	void registerUser(UserDetails userDetails);
+	
 }

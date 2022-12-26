@@ -60,7 +60,7 @@
 		<h1 class="text-center">Registration Form</h1>
 
 
-		<form action="thankyou" method="post">
+		<form action="/addSignup" method="post" modelAttribute="user">
 			<div class="form-row align-items-center">
 				<div class="col-md-6">
 					<label for="firstName">First Name</label> <input type="text"
@@ -141,7 +141,5 @@
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</div>
 	
-	
-
 </body>
 </html>
