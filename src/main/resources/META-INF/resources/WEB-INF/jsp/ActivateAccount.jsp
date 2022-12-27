@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
 <title>Activate Account</title>
 </head>
 <body>
-	<form>
+
 		<!-- Start of navbar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -52,13 +52,15 @@
 			<h1>Activate Account</h1>
 		</div>
 
+<form:form method="POST" action="/welcome" modelAttribute="activateAccount">
+
 		<div class="container">
 			<div class="form-group row ">
 				<label for="inputEmail3" class="col-sm-2 col-form-label">Registered
 					Email</label>
 				<div class="col-sm-6">
 					<input type="email" class="form-control" id="inputEmail3"
-						placeholder="Registered Email">
+						placeholder="Registered Email" name="registeredEmail">
 				</div>
 			</div>
 
@@ -67,7 +69,7 @@
 					Password</label>
 				<div class="col-sm-6">
 					<input type="password" class="form-control" id="newPassword"
-						placeholder="Enter new password">
+						placeholder="Enter new password" name="newPassword">
 				</div>
 			</div>
 			
@@ -76,7 +78,7 @@
 					Password</label>
 				<div class="col-sm-6">
 					<input type="password" class="form-control" id="tempPassword"
-						placeholder="Enter new password">
+						placeholder="Enter new password" name="temporaryPassword">
 				</div>
 			</div>
 
@@ -85,7 +87,7 @@
 					Password</label>
 				<div class="col-sm-6">
 					<input type="password" class="form-control" id="confirmPassword"
-						placeholder="Re-enter password">
+						placeholder="Re-enter password" name="confirmPassword">
 				</div>
 			</div>
 
@@ -96,7 +98,7 @@
 			</div>
 
 		</div>
-	</form>
+	</form:form>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

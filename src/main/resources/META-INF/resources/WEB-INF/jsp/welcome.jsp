@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>SignUp page</title>
+<title>Welcome page</title>
 </head>
 <body>
-	Welcome buddy ${fName} 
+	Welcome buddy ${user.firstName} 
 </body>
 </html>

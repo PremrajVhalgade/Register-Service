@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -49,7 +48,7 @@
 	<br>
 	<div class="container ">
 		<h2 class="text-center">Welcome to Login Page</h2>
-		<form action="thankyou" method="get">
+		<form:form action="/thankyou" method="POST" modelAttribute="login">
 			<div class="form-group row ">
 				<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
 				<div class="col-sm-6">
@@ -61,7 +60,7 @@
 				<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
 				<div class="col-sm-6">
 					<input type="password" class="form-control" id="inputPassword3"
-						placeholder="Password" name="inputPassword3">
+						placeholder="Password" name="password">
 				</div>
 			</div>
 
@@ -74,7 +73,7 @@
 				<br> <a href="/forgetpassword">Forgot Password</a>
 			</div>
 
-		</form>
+		</form:form>
 	</div>
 
 	<!-- Optional JavaScript -->

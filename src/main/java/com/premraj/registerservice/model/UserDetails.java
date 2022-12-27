@@ -1,11 +1,13 @@
 package com.premraj.registerservice.model;
 
 import java.time.LocalDate;
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.ColumnDefault;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.premraj.registerservice.constant.Status;
 
@@ -14,16 +16,56 @@ public class UserDetails {
 	@Id
 	@GeneratedValue
 	private int userId;
+	
 	private String firstName;
 	private String lastName;
 	private String email;
-	private long policyNo;
+	private String mobileNo;
+	
+
 	private String dob;
+	private String policyNo;
+	private String gender;
 	private String country;
 	private String state;
 	private String city;
+
 	private Status status;
+
 	
+	
+	
+
+
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	
+
+	
+
 	public int getUserId() {
 		return userId;
 	}
@@ -56,20 +98,12 @@ public class UserDetails {
 		this.email = email;
 	}
 
-	public long getPolicyNo() {
+	public String getPolicyNo() {
 		return policyNo;
 	}
 
-	public void setPolicyNo(long policyNo) {
+	public void setPolicyNo(String policyNo) {
 		this.policyNo = policyNo;
-	}
-
-	public String getDob() {
-		return dob;
-	}
-
-	public void setDob(String dob) {
-		this.dob = dob;
 	}
 
 	public String getCountry() {
@@ -108,8 +142,7 @@ public class UserDetails {
 	public String toString() {
 		return "UserDetails [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
 				+ email + ", policyNo=" + policyNo + ", dob=" + dob + ", country=" + country + ", state=" + state
-				+ ", city=" + city + ", status=" + status + "]";
+				+ ", city=" + city + ", gender=" + gender + ", status=" + status + "]";
 	}
 
-	
 }

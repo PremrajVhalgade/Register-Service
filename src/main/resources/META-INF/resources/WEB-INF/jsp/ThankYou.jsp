@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@page isELIgnored="false" %>
+    
 <!doctype html>
 <html lang="en">
 <head>
@@ -48,7 +50,7 @@
 
 	<br><br><br><br>
 	<div class="container" align="center">
-		<h1 class="text-center">Thanks for connecting with us !</h1>
+		<h1 class="text-center">Thanks for connecting with us ! ${userDetails.firstName} </h1>
 		<h3 class="text-center">Please check you mail for further details..!</h3>
 		<br>
 		<button class="btn btn-primary " >Go to Home Page</button>

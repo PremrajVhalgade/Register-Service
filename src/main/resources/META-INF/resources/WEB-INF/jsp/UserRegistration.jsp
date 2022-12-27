@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +8,8 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
@@ -60,7 +60,10 @@
 		<h1 class="text-center">Registration Form</h1>
 
 
-		<form action="/addSignup" method="post" modelAttribute="user">
+		<form:form action="/addSignup" method="POST" modelAttribute="user">
+		
+		
+					
 			<div class="form-row align-items-center">
 				<div class="col-md-6">
 					<label for="firstName">First Name</label> <input type="text"
@@ -105,22 +108,39 @@
 				</div>
 
 				<div class="col-md-4">
-					 <br>Gender :<br><input type="radio" id="gender" name="gender"
-						class="form-group"> <label class="form-group" for="gender">Male</label>
-					<input type="radio" id="gender" name="gender" class="form-group">
+					<br>Select Gender :<br>
+					
+					<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" 
+					name="gender" id="inlineRadio1" value="male">
+					<label class ="form-check-label" for="inlineRadio1">Male</label>
+					</div>
+					<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" 
+					name="gender" id="inlineRadio2" value="female">
+					<label class ="form-check-label" for="inlineRadio2">Female</label>
+					</div>
+					
+					
+					<!--  
+					<input type="radio" id="gender" name="gender" class="form-group" onclick="getAnswer('Male')" value="Male"/>
+					<label class="form-group" for="gender">Male</label> <input
+						type="radio" id="gender" name="gender" class="form-group" onclick="getAnswer('Female')" value="Female"/>
 					<label class="form-group" for="gender">Female</label>
+					-->
+				
 				</div>
 			</div>
 			<br>
 
 			<div class="row">
 				<div class="col-sm-4">
-					<label for="countryId">Country</label> <select name="countryId"
+					<label for="countryId">Country</label> <select name="country"
 						class="countries form-control" id="countryId">
-						<option value="">Select Country</option>
+						<option value="India">Select Country</option>
 					</select>
-
 				</div>
+
 				<div class="col-sm-4">
 					<label for="stateId">State</label> <select name="state"
 						class="states form-control" id="stateId">
@@ -134,12 +154,12 @@
 					</select>
 				</div>
 			</div>
-			</form>
+		</form:form>
 	</div>
-<br>
+	<br>
 	<div class="container text-center">
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</div>
-	
+
 </body>
 </html>
