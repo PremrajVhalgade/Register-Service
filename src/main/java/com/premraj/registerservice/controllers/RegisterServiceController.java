@@ -18,8 +18,8 @@ import com.premraj.registerservice.model.Login;
 import com.premraj.registerservice.model.UserDetails;
 import com.premraj.registerservice.serviceImpl.ActivateAccountServiceImpl;
 import com.premraj.registerservice.serviceImpl.LoginServiceImpl;
+import com.premraj.registerservice.serviceImpl.MailSenderService;
 import com.premraj.registerservice.serviceImpl.UserDetailsServiceImpl;
-import com.sendemail.SendMail;
 
 @Controller
 public class RegisterServiceController {
@@ -33,8 +33,11 @@ public class RegisterServiceController {
 	@Autowired
 	private ActivateAccountServiceImpl activateAccountServiceImpl;
 	
+//	@Autowired
+//	private SendMail sendMail;
+	
 	@Autowired
-	private SendMail sendMail;
+	private MailSenderService mailSenderService;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public ModelAndView showRegistrationForm() {
@@ -51,6 +54,7 @@ public class RegisterServiceController {
 			System.out.println(userDetails);
 			userDetails.setStatus(Status.IN_ACTIVE);
 			this.userDetailsServiceImpl.saveUser(userDetails);
+			mailSenderService.sendMail(userDetails.getEmail(), null);
 		}
 		return "ThankYou";
 	}
