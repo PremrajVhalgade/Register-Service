@@ -54,8 +54,10 @@
 				<div class="col-sm-6 text-center">
 					<input type="email" class="form-control" id="inputEmail3"
 						placeholder="Email" name="email">
+					<div class="invalid-feedback">Please provide a valid email.</div>
 				</div>
 			</div>
+
 			<div class="form-group row">
 				<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
 				<div class="col-sm-6">
@@ -70,10 +72,17 @@
 				<div class="container text-center">
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
-				<br> <a href="/forgetpassword">Forgot Password</a>
+				<!--  	<br> <a href="/forgetpassword">Forgot Password</a>-->
 			</div>
 
 		</form:form>
+
+		<form:form action="/forgetpassword">
+			<div class="container text-center">
+				<br> <a href="/forgetpassword">Forgot Password</a>
+			</div>
+		</form:form>
+
 	</div>
 
 	<!-- Optional JavaScript -->

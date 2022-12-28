@@ -50,7 +50,7 @@
 	<div class="container ">
 		<h2 class="text-center">Forgot password..No worries..We have a solution !</h2>
 		<br>
-		<form>
+		<form action="/thankyou" modelAttribute="forgetPassword">
 			<div class="form-group row ">
 				<label for="inputEmail3" class="col-sm-2 col-form-label">Please enter your registered email id:</label>
 				<div class="col-sm-6">

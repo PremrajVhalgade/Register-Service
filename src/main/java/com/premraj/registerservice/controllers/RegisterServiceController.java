@@ -1,7 +1,5 @@
 package com.premraj.registerservice.controllers;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -16,10 +14,10 @@ import com.premraj.registerservice.constant.Status;
 import com.premraj.registerservice.model.ActivateAccount;
 import com.premraj.registerservice.model.Login;
 import com.premraj.registerservice.model.UserDetails;
+import com.premraj.registerservice.sendmail.SendMail;
 import com.premraj.registerservice.serviceImpl.ActivateAccountServiceImpl;
 import com.premraj.registerservice.serviceImpl.LoginServiceImpl;
 import com.premraj.registerservice.serviceImpl.UserDetailsServiceImpl;
-import com.sendemail.SendMail;
 
 @Controller
 public class RegisterServiceController {
@@ -67,6 +65,7 @@ public class RegisterServiceController {
 			System.err.println("error@@@@@@");
 			return "Login";
 		} else {
+			System.out.println(loggedInUser.toString());
 			loginServiceImpl.saveLoggedInUser(loggedInUser);
 		}
 		return "ThankYou";
@@ -117,6 +116,11 @@ public class RegisterServiceController {
 		return "ThankYou";
 	}
 	
+	@RequestMapping("/sendmail")
+	public void sendMailApi() {
+		System.out.println("Inside sendmail api");
+		this.sendMail.sendEmail();
+	}
 	
 
 }

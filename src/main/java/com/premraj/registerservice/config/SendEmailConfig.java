@@ -1,7 +1,6 @@
-package com.sendemail.config;
+package com.premraj.registerservice.config;
 
 import java.util.Properties;
-
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 
