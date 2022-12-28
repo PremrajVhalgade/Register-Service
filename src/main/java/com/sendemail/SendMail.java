@@ -32,7 +32,7 @@ public class SendMail {
 				message.setSubject("This is the Subject Line!");
 
 				// Now set the actual message
-				message.setText("This is actual message");
+				message.setText("Your password is 454545");
 
 				System.out.println("sending...");
 				// Send message
