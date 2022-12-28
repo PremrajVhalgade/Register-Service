@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.datetime.DateFormatter;
 
 import com.premraj.registerservice.constant.Status;
 
@@ -22,7 +23,7 @@ public class UserDetails {
 	private String email;
 	private String mobileNo;
 	
-
+//@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private String dob;
 	private String policyNo;
 	private String gender;

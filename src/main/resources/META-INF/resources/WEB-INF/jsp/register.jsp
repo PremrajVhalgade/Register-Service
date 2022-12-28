@@ -75,9 +75,9 @@
 			<br>
 			<div class="form-row">
 				<div class="col-md-4">
-					<label for="dob">D.O.B.</label> <input type="date"
+					<label for="dob">D.O.B.</label> <input type="text"
 						class="form-control" id="dob" aria-describedby="emailHelp"
-						placeholder="Enter dob" name="dob">
+						placeholder="dd/MM/yyyy" name="dob">
 				</div>
 
 				<div class="col-md-4">

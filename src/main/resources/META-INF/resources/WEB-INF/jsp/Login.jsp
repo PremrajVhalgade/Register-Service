@@ -50,8 +50,8 @@
 		<h2 class="text-center">Welcome to Login Page</h2>
 		<form:form action="/thankyou" method="POST" modelAttribute="login">
 			<div class="form-group row ">
-				<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-				<div class="col-sm-6">
+				<label for="inputEmail3" class="col-sm-2  col-form-label">Email</label>
+				<div class="col-sm-6 text-center">
 					<input type="email" class="form-control" id="inputEmail3"
 						placeholder="Email" name="email">
 				</div>

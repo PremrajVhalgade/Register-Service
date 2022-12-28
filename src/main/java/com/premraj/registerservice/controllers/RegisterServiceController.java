@@ -19,6 +19,7 @@ import com.premraj.registerservice.model.UserDetails;
 import com.premraj.registerservice.serviceImpl.ActivateAccountServiceImpl;
 import com.premraj.registerservice.serviceImpl.LoginServiceImpl;
 import com.premraj.registerservice.serviceImpl.UserDetailsServiceImpl;
+import com.sendemail.SendMail;
 
 @Controller
 public class RegisterServiceController {
@@ -31,6 +32,9 @@ public class RegisterServiceController {
 	
 	@Autowired
 	private ActivateAccountServiceImpl activateAccountServiceImpl;
+	
+	@Autowired
+	private SendMail sendMail;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public ModelAndView showRegistrationForm() {
@@ -112,5 +116,7 @@ public class RegisterServiceController {
 	public String thankYouPage() {
 		return "ThankYou";
 	}
+	
+	
 
 }
