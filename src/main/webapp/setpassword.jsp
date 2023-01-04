@@ -52,18 +52,10 @@
 			<h1>Activate Account</h1>
 		</div>
 
-<form:form method="POST" action="/activate" modelAttribute="activateAccount">
+<form:form method="POST" action="/setpassword" modelAttribute="setpassword">
 
 		<div class="container">
-			<div class="form-group row ">
-				<label for="inputEmail3" class="col-sm-2 col-form-label">Registered
-					Email</label>
-				<div class="col-sm-6">
-					<input type="email" class="form-control" id="inputEmail3"
-						placeholder="Registered Email" name="registeredEmail">
-				</div>
-			</div>
-
+			
 			<div class="form-group row ">
 				<label for="newPassword" class="col-sm-2 col-form-label">New
 					Password</label>
@@ -73,15 +65,7 @@
 				</div>
 			</div>
 			
-			<div class="form-group row ">
-				<label for="tempPassword" class="col-sm-2 col-form-label">Temporary
-					Password</label>
-				<div class="col-sm-6">
-					<input type="password" class="form-control" id="tempPassword"
-						placeholder="Enter new password" name="temporaryPassword">
-				</div>
-			</div>
-
+			
 			<div class="form-group row ">
 				<label for="confirmPassword" class="col-sm-2 col-form-label">Confirm
 					Password</label>
@@ -100,74 +84,6 @@
 		</div>
 	</form:form>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
+	
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Activate Account</title>
-</head>
-<body>
-<form action="/login" method="post">
-	<div align="center">
-		<h2>Activate Account</h2>
-		Registered Email:<input type="text" name="registeredEmail"><br>
-		New Password:<input type="password" name="newPassword"><br>
-		Temporary Password:<input type="password" name="temporaryPassword"><br>
-		Confirm Password:<input type="password" name="confirmPassword"><br>
-		<input type="submit" value="Submit">
-	</div>
-	</form>
-</body>
-</html>
--->

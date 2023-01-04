@@ -1,4 +1,4 @@
-package com.premraj.registerservice.model;
+package com.premraj.registerservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

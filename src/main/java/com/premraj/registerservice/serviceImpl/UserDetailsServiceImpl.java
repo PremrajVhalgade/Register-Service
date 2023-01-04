@@ -3,23 +3,17 @@ package com.premraj.registerservice.serviceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.premraj.registerservice.model.Login;
-import com.premraj.registerservice.model.UserDetails;
-import com.premraj.registerservice.repository.UserDetailsServiceRepo;
+import com.premraj.registerservice.entity.User;
+import com.premraj.registerservice.repository.UserDetailsRepo;
 
 @Service
 public class UserDetailsServiceImpl {
 
 	@Autowired
-	private UserDetailsServiceRepo userDetailsServiceRepo;
+	private UserDetailsRepo userDetailsRepo;
 
-	public void saveUser(UserDetails userDetails) {
-		this.userDetailsServiceRepo.save(userDetails);
+	public void saveUser(User userDetails) {
+		this.userDetailsRepo.save(userDetails);
+		System.out.println("saved user service");
 	}
-
-//	public void saveLoggedInUser(Login loggedInUser) {
-//	this.registerServiceRepo.save(loggedInUser);
-//		
-//	}
-
 }

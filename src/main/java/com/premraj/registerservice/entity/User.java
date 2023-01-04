@@ -1,19 +1,12 @@
-package com.premraj.registerservice.model;
-
-import java.time.LocalDate;
-import java.util.Date;
+package com.premraj.registerservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.datetime.DateFormatter;
-
-import com.premraj.registerservice.constant.Status;
+import javax.persistence.OneToOne;
 
 @Entity
-public class UserDetails {
+public class User {
 	@Id
 	@GeneratedValue
 	private int userId;
@@ -30,15 +23,12 @@ public class UserDetails {
 	private String country;
 	private String state;
 	private String city;
-
-	private Status status;
-
+	private String status;
+	private String userType;
 	
+	@OneToOne(mappedBy = "user")
+	private ActivateAccountDetails activateAccountDetails;
 	
-	
-
-
-
 	public String getDob() {
 		return dob;
 	}
@@ -62,10 +52,6 @@ public class UserDetails {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	
-
-	
 
 	public int getUserId() {
 		return userId;
@@ -131,19 +117,36 @@ public class UserDetails {
 		this.city = city;
 	}
 
-	public Status getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public ActivateAccountDetails getActivateAccountDetails() {
+		return activateAccountDetails;
+	}
+
+	public void setActivateAccountDetails(ActivateAccountDetails activateAccountDetails) {
+		this.activateAccountDetails = activateAccountDetails;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 
 	@Override
 	public String toString() {
-		return "UserDetails [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
-				+ email + ", policyNo=" + policyNo + ", dob=" + dob + ", country=" + country + ", state=" + state
-				+ ", city=" + city + ", gender=" + gender + ", status=" + status + "]";
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", mobileNo=" + mobileNo + ", dob=" + dob + ", policyNo=" + policyNo + ", gender=" + gender
+				+ ", country=" + country + ", state=" + state + ", city=" + city + ", status=" + status + ", userType="
+				+ userType + ", activateAccountDetails=" + activateAccountDetails + "]";
 	}
 
 }
